@@ -4,7 +4,7 @@
 
 /* https: //github.com/orioncactus/pretendard */
 @font-face {
-  font-familly: 'Pretendard';
+  font-family: 'Pretendard';
   font-weight: 900;
   font-display: swap;
   src: local('Pretendard Black'),
@@ -13,7 +13,7 @@
 }
 
 @font-face {
-  font-familly: 'Pretendard';
+  font-family: 'Pretendard';
   font-weight: 800;
   font-display: swap;
   src: local('Pretendard ExtraBold'),
@@ -22,7 +22,7 @@
 }
 
 @font-face {
-  font-familly: 'Pretendard';
+  font-family: 'Pretendard';
   font-weight: 700;
   font-display: swap;
   src: local('Pretendard Bold'),
@@ -31,7 +31,7 @@
 }
 
 @font-face {
-  font-familly: 'Pretendard';
+  font-family: 'Pretendard';
   font-weight: 600;
   font-display: swap;
   src: local('Pretendard SemiBold'),
@@ -40,7 +40,7 @@
 }
 
 @font-face {
-  font-familly: 'Pretendard';
+  font-family: 'Pretendard';
   font-weight: 500;
   font-display: swap;
   src: local('Pretendard Medium'),
@@ -49,7 +49,7 @@
 }
 
 @font-face {
-  font-familly: 'Pretendard';
+  font-family: 'Pretendard';
   font-weight: 400;
   font-display: swap;
   src: local('Pretendard Regular'),
@@ -58,7 +58,7 @@
 }
 
 @font-face {
-  font-familly: 'Pretendard';
+  font-family: 'Pretendard';
   font-weight: 300;
   font-display: swap;
   src: local('Pretendard Light'),
@@ -67,7 +67,7 @@
 }
 
 @font-face {
-  font-familly: 'Pretendard';
+  font-family: 'Pretendard';
   font-weight: 200;
   font-display: swap;
   src: local('Pretendard ExtraLight'),
@@ -77,7 +77,7 @@
 }
 
 @font-face {
-  font-familly: 'Pretendard';
+  font-family: 'Pretendard';
   font-weight: 100;
   font-display: swap;
   src: local('Pretendard Thin'),
