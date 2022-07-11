@@ -1,14 +1,13 @@
+import { useTheme } from 'next-themes';
+
 const HomePage = () => {
-  const setTheme = () => {
-    localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark';
-    document.documentElement.classList.toggle('dark');
-  };
+  const { theme, setTheme } = useTheme();
 
   return (
     <>
       <div className="text-3xl font-medium">Hello World!</div>
       <button
-        onClick={setTheme}
+        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         className="p-1 mt-4 border-2 rounded border-slate-800"
       >
         Toggle Theme
