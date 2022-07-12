@@ -16,10 +16,16 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
+      "contentlayer/generated": ["./.contentlayer/generated"],
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "tailwind.config.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".contentlayer/generated"
+  ],
   "exclude": ["node_modules"]
 }
