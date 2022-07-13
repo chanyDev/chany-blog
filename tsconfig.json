@@ -18,7 +18,8 @@
     "paths": {
       "contentlayer/generated": ["./.contentlayer/generated"],
       "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@components/*": ["components/*"]
     }
   },
   "include": [
