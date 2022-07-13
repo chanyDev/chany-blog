@@ -1,19 +1,33 @@
-import { useTheme } from 'next-themes';
+import { allPosts, Post } from 'contentlayer/generated';
+import Link from 'next/link';
 
-const HomePage = () => {
-  const { theme, setTheme } = useTheme();
-
+const HomePage = ({ posts }: { posts: Post[] }) => {
   return (
     <>
-      <div className="text-3xl font-medium">Hello World!</div>
-      <button
-        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        className="p-1 mt-4 border-2 rounded border-slate-800"
-      >
-        Toggle Theme
-      </button>
+      {posts.map((post) => (
+        <div key={post.slug} className="flex flex-col gap-2.5">
+          <h2 className="text-2xl">
+            <Link href={`/post/${post.slug}`}>{post.title}</Link>
+          </h2>
+          <time dateTime={post.publishedDate}>{post.publishedDate}</time>
+          <div>{post.description}</div>
+        </div>
+      ))}
     </>
   );
+};
+
+export const getStaticProps = async () => {
+  const posts = allPosts.sort(
+    (a, b) =>
+      Number(new Date(b.publishedDate)) - Number(new Date(a.publishedDate)),
+  );
+
+  return {
+    props: {
+      posts,
+    },
+  };
 };
 
 export default HomePage;
