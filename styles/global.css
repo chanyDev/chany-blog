@@ -89,7 +89,7 @@ body {
     'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
     'Malgun Gothic', sans-serif;
 
-  @apply bg-white dark:bg-gray-900 dark:text-white;
+  @apply bg-white dark:bg-gray-900 dark:text-white transition duration-500;
 }
 
 @layer base {
@@ -98,7 +98,7 @@ body {
   }
 }
 
-/* Header Navigation */
+/* Header Navigation Underline */
 .underlined {
-  @apply relative after:content-[''] after:block after:absolute after:left-0  after:-bottom-1 after:h-0.5 after:scale-x-0 after:origin-left  after:transition-all after:bg-black after:w-full hover:after:scale-x-100 dark:after:bg-white;
+  @apply relative after:content-[''] after:block after:absolute after:left-0  after:-bottom-1 after:h-0.5 after:scale-x-0 after:origin-left  after:transition after:bg-black after:w-full hover:after:scale-x-100 dark:after:bg-white;
 }
