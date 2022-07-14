@@ -2,7 +2,7 @@ import { EmailIcon, GithubIcon } from '@components/icons';
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center gap-4 py-8">
+    <footer className="flex flex-col items-center gap-4 pt-12 pb-8">
       <div className="flex gap-6">
         <GithubIcon
           href="https://github.com/chanyDev"
