@@ -19,7 +19,8 @@
       "contentlayer/generated": ["./.contentlayer/generated"],
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@constants/*": ["constants/*"]
     }
   },
   "include": [
