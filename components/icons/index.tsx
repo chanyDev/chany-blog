@@ -2,6 +2,7 @@ import Email from 'public/assets/email.svg';
 import Github from 'public/assets/github.svg';
 import Sun from 'public/assets/sun.svg';
 import Moon from 'public/assets/moon.svg';
+import Menu from 'public/assets/menu.svg';
 
 interface IconProps {
   className: string;
@@ -30,4 +31,8 @@ export const SunIcon = ({ className }: IconProps) => {
 
 export const MoonIcon = ({ className }: IconProps) => {
   return <Moon className={className} />;
+};
+
+export const MenuIcon = ({ className }: IconProps) => {
+  return <Menu className={className} />;
 };
