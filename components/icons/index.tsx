@@ -3,6 +3,7 @@ import Github from 'public/assets/github.svg';
 import Sun from 'public/assets/sun.svg';
 import Moon from 'public/assets/moon.svg';
 import Menu from 'public/assets/menu.svg';
+import Arrow from 'public/assets/arrow.svg';
 
 interface IconProps {
   className: string;
@@ -35,4 +36,8 @@ export const MoonIcon = ({ className }: IconProps) => {
 
 export const MenuIcon = ({ className }: IconProps) => {
   return <Menu className={className} />;
+};
+
+export const ArrowIcon = ({ className }: IconProps) => {
+  return <Arrow className={className} />;
 };
