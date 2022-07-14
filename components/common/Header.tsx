@@ -1,26 +1,45 @@
 import Link from 'next/link';
 
+import { MenuIcon } from '@components/icons';
+import ThemeSwitch from './ThemeSwitch';
+
 const Header = () => {
   return (
-    <div className="fixed top-0 left-0 w-full">
+    <div className="w-full z-100">
       <header className="flex items-center justify-between max-w-3xl py-8 mx-auto xl:max-w-5xl">
         <div>
-          <h1 className="text-2xl font-bold cursor-pointer">
-            <Link href={'/'}>Logo</Link>
-          </h1>
+          <Link href={'/'}>
+            <a className="underlined">
+              <h1 className="text-2xl font-medium cursor-pointer">
+                Chany D. Dev
+              </h1>
+            </a>
+          </Link>
         </div>
-        <nav>
-          <ul className="flex gap-8">
-            <li className="font-medium hover:text-teal-500">
-              <Link href={'/'}>Post</Link>
+        <nav className="flex items-center text-lg">
+          <ul className="hidden gap-4 md:flex">
+            <li className="px-4 py-2 font-medium">
+              <Link href={'/'}>
+                <a className="underlined">Post</a>
+              </Link>
             </li>
-            <li className="font-medium hover:text-teal-500">
-              <Link href={'/'}>Note</Link>
+            <li className="px-4 py-2 font-medium">
+              <Link href={'/'}>
+                <a className="underlined">Note</a>
+              </Link>
             </li>
-            <li className="font-medium hover:text-teal-500">
-              <Link href={'/'}>About</Link>
+            <li className="px-4 py-2 font-medium">
+              <Link href={'/'}>
+                <a className="underlined">About</a>
+              </Link>
             </li>
           </ul>
+          <div className="flex gap-4 ml-4">
+            <ThemeSwitch />
+            <button className="p-3 transition border-2 border-gray-200 hover:border-black dark:border-gray-600 dark:hover:border-white md:hidden rounded-3xl">
+              <MenuIcon className="w-5 h-5 fill-current" />
+            </button>
+          </div>
         </nav>
       </header>
     </div>
