@@ -19,13 +19,18 @@ const Header = () => {
         <nav className="flex items-center text-lg">
           <ul className="hidden gap-4 md:flex">
             <li className="px-4 py-2 font-medium">
-              <Link href={'/post'}>
+              <Link href={'/posts'}>
                 <a className="underlined">Post</a>
               </Link>
             </li>
             <li className="px-4 py-2 font-medium">
               <Link href={'/about'}>
                 <a className="underlined">About</a>
+              </Link>
+            </li>
+            <li className="px-4 py-2 font-medium">
+              <Link href={'/tags'}>
+                <a className="underlined">Tags</a>
               </Link>
             </li>
           </ul>
