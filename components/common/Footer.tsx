@@ -6,14 +6,14 @@ const Footer = () => {
       <div className="flex gap-6">
         <GithubIcon
           href="https://github.com/chanyDev"
-          className="h-6 text-gray-500 fill-current dark:text-gray-400"
+          className="h-6 text-gray-500 transition fill-current dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
         />
         <EmailIcon
           href="chanyd.dev@gmail.com"
-          className="h-6 text-gray-500 fill-current dark:text-gray-400"
+          className="h-6 text-gray-500 transition fill-current dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
         />
       </div>
-      <div className="text-sm text-gray-500 dark:text-gray-400">
+      <div className="text-gray-500 text-md dark:text-gray-400">
         Copyright © 2022 Dongchan Kim
       </div>
     </footer>
