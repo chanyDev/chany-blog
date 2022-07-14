@@ -1,27 +1,28 @@
+import PostItem from '@components/post/PostItem';
+import { RECENT_POST_COUNT } from 'constants/index';
+
 import { allPosts, Post } from 'contentlayer/generated';
-import Link from 'next/link';
 
 const HomePage = ({ posts }: { posts: Post[] }) => {
   return (
-    <>
-      {posts.map((post) => (
-        <div key={post.slug} className="flex flex-col gap-2.5">
-          <h2 className="text-2xl">
-            <Link href={`/post/${post.slug}`}>{post.title}</Link>
-          </h2>
-          <time dateTime={post.publishedDate}>{post.publishedDate}</time>
-          <div>{post.description}</div>
-        </div>
-      ))}
-    </>
+    <div>
+      <h2 className="py-6 text-3xl font-extrabold md:text-4xl">Recent Post</h2>
+      <ul className="divide-y">
+        {posts.map((post) => (
+          <PostItem post={post} key={post.slug} />
+        ))}
+      </ul>
+    </div>
   );
 };
 
 export const getStaticProps = async () => {
-  const posts = allPosts.sort(
-    (a, b) =>
-      Number(new Date(b.publishedDate)) - Number(new Date(a.publishedDate)),
-  );
+  const posts = allPosts
+    .sort(
+      (a, b) =>
+        Number(new Date(b.publishedDate)) - Number(new Date(a.publishedDate)),
+    )
+    .slice(0, RECENT_POST_COUNT);
 
   return {
     props: {
