@@ -45,9 +45,9 @@ const Header = () => {
               className="p-3 transition border-2 border-gray-200 hover:border-black dark:border-gray-600 dark:hover:border-white md:hidden rounded-3xl modal"
             >
               {visible ? (
-                <CloseIcon className="w-5 h-5 text-black transition fill-current dark:text-white" />
+                <CloseIcon className="w-5 h-5 text-black transition fill-current dark:text-white animate-fadeIn" />
               ) : (
-                <MenuIcon className="w-5 h-5 text-black transition fill-current dark:text-white" />
+                <MenuIcon className="w-5 h-5 text-black transition fill-current dark:text-white animate-fadeIn" />
               )}
             </button>
           </div>
