@@ -1,11 +1,15 @@
 import Link from 'next/link';
 
-import { MenuIcon } from '@components/icons';
+import { CloseIcon, MenuIcon } from '@components/icons';
+import useVisible from '@hooks/useVisible';
 import ThemeSwitch from './ThemeSwitch';
+import DropDown from './DropDown';
 
 const Header = () => {
+  const { visible, handleToggleDropDown } = useVisible();
+
   return (
-    <div className="w-full">
+    <div className="z-20 w-full">
       <header className="flex items-center justify-between max-w-3xl py-8 mx-auto xl:max-w-5xl">
         <div>
           <Link href={'/'}>
@@ -36,12 +40,20 @@ const Header = () => {
           </ul>
           <div className="flex gap-4 ml-8">
             <ThemeSwitch />
-            <button className="p-3 transition border-2 border-gray-200 hover:border-black dark:border-gray-600 dark:hover:border-white md:hidden rounded-3xl">
-              <MenuIcon className="w-5 h-5 fill-current" />
+            <button
+              onClick={handleToggleDropDown}
+              className="p-3 transition border-2 border-gray-200 hover:border-black dark:border-gray-600 dark:hover:border-white md:hidden rounded-3xl modal"
+            >
+              {visible ? (
+                <CloseIcon className="w-5 h-5 text-black transition fill-current dark:text-white" />
+              ) : (
+                <MenuIcon className="w-5 h-5 text-black transition fill-current dark:text-white" />
+              )}
             </button>
           </div>
         </nav>
       </header>
+      <DropDown visible={visible} handleToggleDropDown={handleToggleDropDown} />
     </div>
   );
 };
