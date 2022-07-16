@@ -24,7 +24,7 @@ const Header = () => {
           <ul className="hidden gap-4 md:flex">
             <li className="px-4 py-2 font-medium">
               <Link href={'/posts'}>
-                <a className="underlined">Post</a>
+                <a className="underlined">Posts</a>
               </Link>
             </li>
             <li className="px-4 py-2 font-medium">
