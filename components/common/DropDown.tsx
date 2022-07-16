@@ -22,7 +22,9 @@ const DropDown = ({ visible, handleToggleDropDown }: DropDownProps) => {
       <div
         onClick={handleToggleDropDown}
         className={`fixed inset-0 w-full h-screen transition duration-200 bg-white dark:bg-gray-900 pt-[112px] md:hidden ${
-          visible ? 'translate-y-0 opacity-100' : '-translate-y-8  opacity-0'
+          visible
+            ? 'translate-y-0 opacity-100'
+            : '-translate-y-10  opacity-0 -z-20'
         } `}
       >
         <ul className="flex flex-col">
