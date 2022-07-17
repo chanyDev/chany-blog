@@ -4,15 +4,7 @@
 }
 
 .prose p code {
-  /* color: #ec4899;
-  font-weight: 600;
-  font-size: 0.875em;
-  background-color: #f3f4f6;
-  padding: 2px 4px;
-  border-radius: 0.25rem;
-  background-color: #262626; */
-
-  @apply text-pink-500 dark:text-pink-600;
+  @apply text-black dark:text-white font-semibold text-sm;
 }
 
 /* Code Title Styles */
