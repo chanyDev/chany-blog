@@ -1,4 +1,5 @@
 import '@styles/global.css';
+import '@styles/prism.css';
 
 import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';

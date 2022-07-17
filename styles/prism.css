@@ -1,0 +1,51 @@
+/* Tag Styles */
+.prose h3 {
+  font-size: 1.5rem;
+}
+
+.prose p code {
+  /* color: #ec4899;
+  font-weight: 600;
+  font-size: 0.875em;
+  background-color: #f3f4f6;
+  padding: 2px 4px;
+  border-radius: 0.25rem;
+  background-color: #262626; */
+
+  @apply text-pink-500 dark:text-pink-600;
+}
+
+/* Code Title Styles */
+
+/* Token Styles */
+.token {
+  color: rgb(255, 255, 255);
+}
+
+.token.keyword {
+  color: rgb(232 121 249);
+}
+
+.token.string {
+  color: rgb(250 204 21);
+}
+
+.token.class-name,
+.token.builtin {
+  color: rgb(33, 225, 255);
+}
+
+.token.attr-name {
+  color: rgb(36, 250, 12);
+}
+
+.token.tag {
+  color: rgb(248 113 113);
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: rgb(99, 119, 119);
+  font-style: italic;
+}
