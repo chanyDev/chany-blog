@@ -17,7 +17,7 @@ const PostItem = ({ post }: { post: Post }) => {
           </time>
         </div>
         <div className="grow-[3]">
-          <h3 className="text-2xl font-semibold">
+          <h3 className="text-2xl font-semibold md:text-3xl">
             <Link href={`/posts/${post.slug}`}>{post.title}</Link>
           </h3>
           <div className="flex flex-wrap">
