@@ -10,8 +10,10 @@ interface PageProps {
 
 const PostDetailPage = ({
   post,
+  prevPost,
+  nextPost,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  return <PostMDX post={post} />;
+  return <PostMDX post={post} prevPost={prevPost} nextPost={nextPost} />;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -25,11 +27,21 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params as PageProps;
-  const post = allPosts.find((post) => post.slug === slug);
+  const post = allPosts
+    .sort(
+      (a, b) =>
+        Number(new Date(b.publishedDate)) - Number(new Date(a.publishedDate)),
+    )
+    .find((post) => post.slug === slug);
+  const postIndex = allPosts.findIndex((post) => post.slug === slug);
+  const prevPost = allPosts[postIndex - 1] || null;
+  const nextPost = allPosts[postIndex + 1] || null;
 
   return {
     props: {
       post,
+      prevPost,
+      nextPost,
     },
   };
 };
