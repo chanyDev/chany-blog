@@ -3,7 +3,13 @@ import { Post } from 'contentlayer/generated';
 
 import PostNavigation from './PostNavigation';
 
-const PostMDX = ({ post }: { post: Post }) => {
+interface PostMDXProps {
+  post: Post;
+  prevPost: Post | null;
+  nextPost: Post | null;
+}
+
+const PostMDX = ({ post, prevPost, nextPost }: PostMDXProps) => {
   const MDX = useMDXComponent(post.body.code);
 
   return (
@@ -23,7 +29,7 @@ const PostMDX = ({ post }: { post: Post }) => {
           <MDX />
         </div>
         {/* Navigation */}
-        <PostNavigation post={post} />
+        <PostNavigation post={post} prevPost={prevPost} nextPost={nextPost} />
       </div>
     </article>
   );
