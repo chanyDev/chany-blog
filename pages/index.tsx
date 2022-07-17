@@ -6,7 +6,7 @@ import { allPosts, Post } from 'contentlayer/generated';
 const HomePage = ({ posts }: { posts: Post[] }) => {
   return (
     <>
-      <h2 className="py-6 text-3xl font-extrabold md:text-4xl">Recent Post</h2>
+      <h2 className="py-6 text-4xl font-extrabold md:text-5xl">Recent Post</h2>
       <ul className="divide-y">
         {posts.map((post) => (
           <PostItem post={post} key={post.slug} />
