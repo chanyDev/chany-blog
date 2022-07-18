@@ -12,7 +12,7 @@ interface PostListProps {
   searchVisible?: boolean;
   pagenation?: {
     currentPage: number;
-    totalPage: number;
+    totalPages: number;
   };
 }
 
