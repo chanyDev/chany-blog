@@ -17,7 +17,7 @@ const PostNavigation = ({ post, prevPost, nextPost }: PostNavigationProps) => {
         {post.tags && (
           <>
             <div className="text-gray-500 dark:text-gray-400">Tags</div>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap gap-1">
               {post.tags.map((tag, i) => (
                 <PostTag tag={tag} key={`${tag}${i}`} />
               ))}

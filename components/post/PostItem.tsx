@@ -20,7 +20,7 @@ const PostItem = ({ post }: { post: Post }) => {
           <h3 className="text-2xl font-semibold md:text-3xl">
             <Link href={`/posts/${post.slug}`}>{post.title}</Link>
           </h3>
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap gap-1">
             {post.tags?.map((tag, i) => (
               <PostTag tag={tag} key={`${tag}${i}`} />
             ))}
