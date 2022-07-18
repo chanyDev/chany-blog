@@ -29,19 +29,23 @@ const PostNavigation = ({ post, prevPost, nextPost }: PostNavigationProps) => {
             Previous Post
           </div>
           {prevPost && (
-            <div className="flex items-center text-sm font-medium md:text-base text-cyan-500 hover:text-cyan-600 dark:text-cyan-500 dark:hover:text-cyan-400">
-              <ArrowIcon className="w-3 h-3 mr-2 rotate-180 fill-current" />
-              <Link href={`/posts/${prevPost.slug}`}>{prevPost.title}</Link>
-            </div>
+            <Link href={`/posts/${prevPost.slug}`}>
+              <a className="flex items-center text-sm font-medium md:text-base text-cyan-500 hover:text-cyan-600 dark:text-cyan-500 dark:hover:text-cyan-400">
+                <ArrowIcon className="w-3 h-3 mr-2 rotate-180 fill-current" />
+                {prevPost.title}
+              </a>
+            </Link>
           )}
         </div>
         <div>
           <div className="mb-1 text-gray-500 dark:text-gray-400">Next Post</div>
           {nextPost && (
-            <div className="flex items-center text-sm font-medium md:text-base text-cyan-500 hover:text-cyan-600 dark:text-cyan-500 dark:hover:text-cyan-400">
-              <Link href={`/posts/${nextPost.slug}`}>{nextPost.title}</Link>
-              <ArrowIcon className="w-3 h-3 ml-2 fill-current" />
-            </div>
+            <Link href={`/posts/${nextPost.slug}`}>
+              <a className="flex items-center text-sm font-medium md:text-base text-cyan-500 hover:text-cyan-600 dark:text-cyan-500 dark:hover:text-cyan-400">
+                {nextPost.title}
+                <ArrowIcon className="w-3 h-3 ml-2 fill-current" />
+              </a>
+            </Link>
           )}
         </div>
       </div>
