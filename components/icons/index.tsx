@@ -5,6 +5,7 @@ import Moon from 'public/assets/moon.svg';
 import Menu from 'public/assets/menu.svg';
 import Close from 'public/assets/close.svg';
 import Arrow from 'public/assets/arrow.svg';
+import Search from 'public/assets/search.svg';
 
 interface IconProps {
   className: string;
@@ -45,4 +46,8 @@ export const CloseIcon = ({ className }: IconProps) => {
 
 export const ArrowIcon = ({ className }: IconProps) => {
   return <Arrow className={className} />;
+};
+
+export const SearchIcon = ({ className }: IconProps) => {
+  return <Search className={className} />;
 };
