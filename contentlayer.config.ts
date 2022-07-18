@@ -1,6 +1,7 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 // rehype plugin
 import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrism from 'rehype-prism-plus';
 // remark plugin
 import remarkGfm from 'remark-gfm';
@@ -29,6 +30,6 @@ export default makeSource({
   documentTypes: [Post],
   mdx: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeSlug, rehypePrism],
+    rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings, rehypePrism],
   },
 });
