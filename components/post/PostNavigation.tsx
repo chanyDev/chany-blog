@@ -16,10 +16,12 @@ const PostNavigation = ({ post, prevPost, nextPost }: PostNavigationProps) => {
       <div className="pt-6">
         {post.tags && (
           <>
-            <div className="mb-1 text-gray-500 dark:text-gray-400">Tags</div>
-            {post.tags.map((tag, i) => (
-              <PostTag tag={tag} key={`${tag}${i}`} />
-            ))}
+            <div className="text-gray-500 dark:text-gray-400">Tags</div>
+            <div className="flex flex-wrap">
+              {post.tags.map((tag, i) => (
+                <PostTag tag={tag} key={`${tag}${i}`} />
+              ))}
+            </div>
           </>
         )}
       </div>
