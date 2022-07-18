@@ -3,7 +3,7 @@ import { allPosts } from 'contentlayer/generated';
 
 import PostMDX from '@components/post/PostMDX';
 
-interface PageProps {
+interface DetailPageParams {
   [key: string]: string | undefined;
   slug: string;
 }
@@ -26,7 +26,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { slug } = params as PageProps;
+  const { slug } = params as DetailPageParams;
   const post = allPosts
     .sort(
       (a, b) =>
