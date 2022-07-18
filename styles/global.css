@@ -84,6 +84,10 @@
     url('/static/fonts/woff/Pretendard-Thin.woff') format('woff');
 }
 
+html {
+  @apply scroll-smooth;
+}
+
 body {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
     'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
