@@ -25,27 +25,33 @@ const PostNavigation = ({ post, prevPost, nextPost }: PostNavigationProps) => {
       </div>
       <div className="flex justify-between py-6 ">
         <div>
-          <div className="mb-1 text-gray-500 dark:text-gray-400">
-            Previous Post
-          </div>
           {prevPost && (
-            <Link href={`/posts/${prevPost.slug}`}>
-              <a className="flex items-center text-sm font-medium md:text-base text-cyan-500 hover:text-cyan-600 dark:text-cyan-500 dark:hover:text-cyan-400">
-                <ArrowIcon className="w-3 h-3 mr-2 rotate-180 fill-current" />
-                {prevPost.title}
-              </a>
-            </Link>
+            <>
+              <div className="mb-1 text-gray-500 dark:text-gray-400">
+                Previous Post
+              </div>
+              <Link href={`/posts/${prevPost.slug}`}>
+                <a className="flex items-center text-sm font-medium md:text-base text-cyan-500 hover:text-cyan-600 dark:text-cyan-500 dark:hover:text-cyan-400">
+                  <ArrowIcon className="w-3 h-3 mr-2 rotate-180 fill-current" />
+                  {prevPost.title}
+                </a>
+              </Link>
+            </>
           )}
         </div>
         <div>
-          <div className="mb-1 text-gray-500 dark:text-gray-400">Next Post</div>
           {nextPost && (
-            <Link href={`/posts/${nextPost.slug}`}>
-              <a className="flex items-center text-sm font-medium md:text-base text-cyan-500 hover:text-cyan-600 dark:text-cyan-500 dark:hover:text-cyan-400">
-                {nextPost.title}
-                <ArrowIcon className="w-3 h-3 ml-2 fill-current" />
-              </a>
-            </Link>
+            <>
+              <div className="mb-1 text-gray-500 dark:text-gray-400">
+                Next Post
+              </div>
+              <Link href={`/posts/${nextPost.slug}`}>
+                <a className="flex items-center text-sm font-medium md:text-base text-cyan-500 hover:text-cyan-600 dark:text-cyan-500 dark:hover:text-cyan-400">
+                  {nextPost.title}
+                  <ArrowIcon className="w-3 h-3 ml-2 fill-current" />
+                </a>
+              </Link>
+            </>
           )}
         </div>
       </div>
