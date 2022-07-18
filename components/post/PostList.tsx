@@ -37,7 +37,7 @@ const PostList = ({
     <>
       <div>
         <h2 className="py-6 text-4xl font-extrabold md:text-5xl">
-          {searchVisible ? 'All Posts' : 'Recetns Posts'}
+          {searchVisible ? 'All Posts' : 'Recent Posts'}
         </h2>
         {searchVisible && <PostSearchBar setSearchValue={setSearchValue} />}
       </div>
