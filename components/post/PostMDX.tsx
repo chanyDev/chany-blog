@@ -13,7 +13,7 @@ const PostMDX = ({ post, prevPost, nextPost }: PostMDXProps) => {
   const MDX = useMDXComponent(post.body.code);
 
   return (
-    <article className="divide-y">
+    <article className="divide-y divide-gray-300 dark:divide-gray-500">
       <div className="flex flex-col py-6">
         <h2 className="text-3xl font-extrabold md:text-4xl">{post.title}</h2>
         <time
@@ -23,9 +23,9 @@ const PostMDX = ({ post, prevPost, nextPost }: PostMDXProps) => {
           {post.publishedDate}
         </time>
       </div>
-      <div className="w-full divide-y">
+      <div className="w-full divide-y divide-gray-300 dark:divide-gray-500">
         {/* MDX */}
-        <div className="py-6 prose max-w-none">
+        <div className="py-6 prose text-gray-600 dark:text-gray-300 max-w-none">
           <MDX />
         </div>
         {/* Navigation */}
