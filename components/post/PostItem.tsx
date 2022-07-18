@@ -7,8 +7,8 @@ import PostTag from './PostTag';
 const PostItem = ({ post }: { post: Post }) => {
   return (
     <li key={post.slug} className="flex flex-col gap-2.5 py-10">
-      <article className="md:flex">
-        <div className="grow-[1]">
+      <article className="md:grid md:grid-cols-4">
+        <div className="col-span-1">
           <time
             className="font-medium text-gray-500 dark:text-gray-400"
             dateTime={post.publishedDate}
@@ -16,7 +16,7 @@ const PostItem = ({ post }: { post: Post }) => {
             {post.publishedDate}
           </time>
         </div>
-        <div className="grow-[3]">
+        <div className="col-span-3">
           <h3 className="text-2xl font-semibold md:text-3xl">
             <Link href={`/posts/${post.slug}`}>{post.title}</Link>
           </h3>
