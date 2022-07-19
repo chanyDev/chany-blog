@@ -20,8 +20,8 @@ const PostListPage = ({
   return (
     <PostList
       posts={posts}
-      searchVisible={true}
       initialPosts={initialPosts}
+      title="All Posts"
       pagenation={pagenation}
     />
   );

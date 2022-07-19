@@ -8,8 +8,8 @@ import NotFound from './NotFound';
 
 interface PostListProps {
   posts: Post[];
-  initialPosts?: Post[];
-  searchVisible?: boolean;
+  initialPosts: Post[];
+  title: string;
   pagenation?: {
     currentPage: number;
     totalPages: number;
@@ -19,8 +19,8 @@ interface PostListProps {
 const PostList = ({
   posts,
   initialPosts,
+  title,
   pagenation,
-  searchVisible = false,
 }: PostListProps) => {
   const [searchValue, setSearchValue] = useState('');
 
@@ -36,10 +36,10 @@ const PostList = ({
   return (
     <>
       <div>
-        <h2 className="py-6 text-4xl font-extrabold md:text-5xl">
-          {searchVisible ? 'All Posts' : 'Recent Posts'}
-        </h2>
-        {searchVisible && <PostSearchBar setSearchValue={setSearchValue} />}
+        <h2 className="py-6 text-4xl font-extrabold md:text-5xl">{title}</h2>
+        {title === 'All Posts' && (
+          <PostSearchBar setSearchValue={setSearchValue} />
+        )}
       </div>
       <ul className="divide-y divide-gray-300 dark:divide-gray-500">
         {displayPosts.map((post) => (
