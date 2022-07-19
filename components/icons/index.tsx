@@ -1,11 +1,11 @@
-import Email from 'public/assets/email.svg';
-import Github from 'public/assets/github.svg';
-import Sun from 'public/assets/sun.svg';
-import Moon from 'public/assets/moon.svg';
-import Menu from 'public/assets/menu.svg';
-import Close from 'public/assets/close.svg';
-import Arrow from 'public/assets/arrow.svg';
-import Search from 'public/assets/search.svg';
+import Email from 'public/assets/icons/email.svg';
+import Github from 'public/assets/icons/github.svg';
+import Sun from 'public/assets/icons/sun.svg';
+import Moon from 'public/assets/icons/moon.svg';
+import Menu from 'public/assets/icons/menu.svg';
+import Close from 'public/assets/icons/close.svg';
+import Arrow from 'public/assets/icons/arrow.svg';
+import Search from 'public/assets/icons/search.svg';
 
 interface IconProps {
   className: string;
