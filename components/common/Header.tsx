@@ -28,13 +28,13 @@ const Header = () => {
               </Link>
             </li>
             <li className="px-4 py-2 font-medium">
-              <Link href={'/about'}>
-                <a className="underlined">About</a>
+              <Link href={'/tags'}>
+                <a className="underlined">Tags</a>
               </Link>
             </li>
             <li className="px-4 py-2 font-medium">
-              <Link href={'/tags'}>
-                <a className="underlined">Tags</a>
+              <Link href={'/about'}>
+                <a className="underlined">About</a>
               </Link>
             </li>
           </ul>
