@@ -1,10 +1,18 @@
 /* Tag Styles */
-.prose h3 {
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5 {
   @apply text-2xl dark:text-white;
 }
 
-.prose p code {
+.prose p code,
+.prose ul code {
   @apply text-pink-500 dark:text-pink-600 font-semibold text-sm bg-gray-100 dark:bg-gray-800 px-1 py-[2px] rounded;
+}
+
+.prose a {
+  @apply break-all text-black dark:text-white;
 }
 
 /* Code Title Styles */
@@ -37,7 +45,7 @@
 }
 
 .token.tag {
-  color: rgb(248, 113, 113);
+  color: rgb(245, 117, 61);
 }
 
 .token.comment,
