@@ -33,8 +33,8 @@ const PostNavigation = ({ post, prevPost, nextPost }: PostNavigationProps) => {
                 Previous Post
               </div>
               <Link href={`/posts/${prevPost.slug}`}>
-                <a className="flex items-center text-sm font-medium md:text-base text-cyan-500 hover:text-cyan-600 dark:text-cyan-500 dark:hover:text-cyan-400">
-                  <ArrowIcon className="w-3 h-3 mr-2 rotate-180 fill-current" />
+                <a className="group flex items-center text-sm font-medium md:text-base text-cyan-500 hover:text-cyan-600 dark:text-cyan-500 dark:hover:text-cyan-400">
+                  <ArrowIcon className="transition group-hover:-translate-x-[2px] w-3 h-3 mr-2 rotate-180 fill-current" />
                   {prevPost.title}
                 </a>
               </Link>
@@ -48,9 +48,9 @@ const PostNavigation = ({ post, prevPost, nextPost }: PostNavigationProps) => {
                 Next Post
               </div>
               <Link href={`/posts/${nextPost.slug}`}>
-                <a className="flex items-center text-sm font-medium md:text-base text-cyan-500 hover:text-cyan-600 dark:text-cyan-500 dark:hover:text-cyan-400">
+                <a className="group flex items-center text-sm font-medium md:text-base text-cyan-500 hover:text-cyan-600 dark:text-cyan-500 dark:hover:text-cyan-400">
                   {nextPost.title}
-                  <ArrowIcon className="w-3 h-3 ml-2 fill-current" />
+                  <ArrowIcon className="transition group-hover:translate-x-[2px] w-3 h-3 ml-2 fill-current" />
                 </a>
               </Link>
             </>
