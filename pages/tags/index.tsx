@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
   const tags = [
     ...new Set(
       allPosts.reduce<string[]>((prev, curr: Post) => {
-        curr.tags?.forEach((tag) => prev.push(tag));
+        curr.tags?.forEach((tag) => prev.push(tag.toLowerCase()));
         return prev;
       }, []),
     ),
