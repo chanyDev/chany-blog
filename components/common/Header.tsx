@@ -1,9 +1,11 @@
 import Link from 'next/link';
+// import { useRouter } from 'next/router';
 
 import { CloseIcon, MenuIcon } from '@components/icons';
 import useVisible from '@hooks/useVisible';
 import ThemeSwitch from './ThemeSwitch';
 import DropDown from './DropDown';
+import NavItem from './NavItem';
 
 const Header = () => {
   const { visible, handleToggleDropDown } = useVisible();
@@ -12,7 +14,7 @@ const Header = () => {
     <div className="z-20 w-full">
       <header className="flex items-center justify-between max-w-3xl py-8 mx-auto xl:max-w-5xl">
         <div>
-          <Link href={'/'}>
+          <Link className="" href={'/'}>
             <a className="underlined">
               <h1 className="text-2xl font-medium cursor-pointer">
                 Chany D. Dev
@@ -22,21 +24,24 @@ const Header = () => {
         </div>
         <nav className="flex items-center text-lg">
           <ul className="hidden gap-4 md:flex">
-            <li className="px-4 py-2 font-medium">
+            {/* <li className="px-4 py-2 font-medium">
               <Link href={'/posts'}>
                 <a className="underlined">Posts</a>
               </Link>
-            </li>
-            <li className="px-4 py-2 font-medium">
+            </li> */}
+            <NavItem href="/posts">Posts</NavItem>
+            {/* <li className="px-4 py-2 font-medium">
               <Link href={'/tags'}>
                 <a className="underlined">Tags</a>
               </Link>
-            </li>
-            <li className="px-4 py-2 font-medium">
+            </li> */}
+            <NavItem href="/tags">Tags</NavItem>
+            {/* <li className="px-4 py-2 font-medium">
               <Link href={'/about'}>
                 <a className="underlined">About</a>
               </Link>
-            </li>
+            </li> */}
+            <NavItem href="/about">About</NavItem>
           </ul>
           <div className="flex gap-4 ml-8">
             <ThemeSwitch />
