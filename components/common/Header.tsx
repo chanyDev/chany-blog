@@ -1,5 +1,4 @@
 import Link from 'next/link';
-// import { useRouter } from 'next/router';
 
 import { CloseIcon, MenuIcon } from '@components/icons';
 import useVisible from '@hooks/useVisible';
@@ -24,23 +23,8 @@ const Header = () => {
         </div>
         <nav className="flex items-center text-lg">
           <ul className="hidden gap-4 md:flex">
-            {/* <li className="px-4 py-2 font-medium">
-              <Link href={'/posts'}>
-                <a className="underlined">Posts</a>
-              </Link>
-            </li> */}
             <NavItem href="/posts">Posts</NavItem>
-            {/* <li className="px-4 py-2 font-medium">
-              <Link href={'/tags'}>
-                <a className="underlined">Tags</a>
-              </Link>
-            </li> */}
             <NavItem href="/tags">Tags</NavItem>
-            {/* <li className="px-4 py-2 font-medium">
-              <Link href={'/about'}>
-                <a className="underlined">About</a>
-              </Link>
-            </li> */}
             <NavItem href="/about">About</NavItem>
           </ul>
           <div className="flex gap-4 ml-8">
