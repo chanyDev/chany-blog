@@ -15,6 +15,10 @@
   @apply break-all text-black dark:text-white;
 }
 
+.prose strong {
+  @apply text-black dark:text-white;
+}
+
 /* Code Title Styles */
 
 /* Token Styles */
