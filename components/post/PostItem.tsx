@@ -29,7 +29,7 @@ const PostItem = ({ post }: { post: Post }) => {
             {post.description}
           </div>
           <div className="mt-6">
-            <Link href={`posts/${post.slug}`}>
+            <Link href={`/posts/${post.slug}`}>
               <a className="flex items-center group">
                 <span className="mr-6 font-medium">Read More</span>
                 <button className="p-2 transition border-2 border-gray-200 group-hover:border-black dark:border-gray-600 dark:group-hover:border-white rounded-3xl">
