@@ -1,0 +1,13 @@
+{
+  "Blog Front Matter": {
+    "prefix": "blog",
+    "body": [
+      "---",
+      "title: ",
+      "publishedDate: ",
+      "description: ",
+      "tags: []",
+      "---"
+    ]
+  }
+}
