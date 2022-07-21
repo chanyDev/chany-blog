@@ -14,11 +14,11 @@ const PostMDX = ({ post, prevPost, nextPost }: PostMDXProps) => {
 
   return (
     <article className="divide-y divide-gray-300 dark:divide-gray-500">
-      <div className="flex flex-col py-6">
+      <div className="flex flex-col gap-2 py-6">
         <h2 className="text-3xl font-extrabold md:text-4xl">{post.title}</h2>
         <time
           dateTime={post.publishedDate}
-          className="mt-1 text-gray-500 dark:text-gray-400"
+          className="text-gray-500 dark:text-gray-400"
         >
           {post.publishedDate}
         </time>
