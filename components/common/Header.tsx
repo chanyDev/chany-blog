@@ -15,9 +15,7 @@ const Header = () => {
         <div>
           <Link className="" href={'/'}>
             <a className="underlined">
-              <h1 className="text-2xl font-medium cursor-pointer">
-                Chany D. Dev
-              </h1>
+              <h1 className="text-2xl font-medium cursor-pointer">Chany.Dev</h1>
             </a>
           </Link>
         </div>
