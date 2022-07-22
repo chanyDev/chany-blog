@@ -1,7 +1,9 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { allPosts } from 'contentlayer/generated';
+import { NextSeo } from 'next-seo';
 
 import PostMDX from '@components/post/PostMDX';
+import metadata from 'config/metadata';
 
 interface DetailPageParams {
   [key: string]: string | undefined;
@@ -13,7 +15,21 @@ const PostDetailPage = ({
   prevPost,
   nextPost,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  return <PostMDX post={post} prevPost={prevPost} nextPost={nextPost} />;
+  return (
+    <>
+      <NextSeo
+        title={post.title}
+        description={post.description}
+        canonical={`${metadata.url}/posts/${post.slug}`}
+        openGraph={{
+          url: `${metadata.url}/posts/${post.slug}`,
+          title: post.title,
+          description: post.description,
+        }}
+      />
+      <PostMDX post={post} prevPost={prevPost} nextPost={nextPost} />
+    </>
+  );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

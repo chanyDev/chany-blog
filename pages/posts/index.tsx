@@ -1,5 +1,7 @@
 import { allPosts, Post } from 'contentlayer/generated';
+import { NextSeo } from 'next-seo';
 
+import metadata from 'config/metadata';
 import PostList from '@components/post/PostList';
 import { POST_PER_PAGE } from '@constants/index';
 
@@ -18,12 +20,24 @@ const PostListPage = ({
   pagenation,
 }: PostListPageProps) => {
   return (
-    <PostList
-      posts={posts}
-      initialPosts={initialPosts}
-      title="All Posts"
-      pagenation={pagenation}
-    />
+    <>
+      <NextSeo
+        title="Posts"
+        description="프론트엔드 기술들을 정리합니다."
+        canonical={`${metadata.url}/posts`}
+        openGraph={{
+          url: `${metadata.url}/posts`,
+          title: `Posts | ${metadata.title}`,
+          description: '프론트엔드 기술들을 정리합니다.',
+        }}
+      />
+      <PostList
+        posts={posts}
+        initialPosts={initialPosts}
+        title="All Posts"
+        pagenation={pagenation}
+      />
+    </>
   );
 };
 

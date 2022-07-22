@@ -4,7 +4,9 @@ import '@styles/prism.css';
 import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { DefaultSeo } from 'next-seo';
 
+import SEO from 'next-seo.config';
 import Layout from '@components/common/Layout';
 
 const App = ({ Component, pageProps }: AppProps) => {
@@ -13,11 +15,10 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
-      <>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </>
+      <DefaultSeo {...SEO} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 };

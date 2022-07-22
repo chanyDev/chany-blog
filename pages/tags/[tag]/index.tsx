@@ -1,7 +1,9 @@
 import { allPosts, Post } from 'contentlayer/generated';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { NextSeo } from 'next-seo';
 
 import PostList from '@components/post/PostList';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import metadata from 'config/metadata';
 
 interface TagPageParmas {
   [key: string]: string | undefined;
@@ -15,7 +17,19 @@ interface TagPageProps {
 }
 
 const TagPage = ({ posts, initialPosts, tag }: TagPageProps) => {
-  return <PostList posts={posts} initialPosts={initialPosts} title={tag} />;
+  return (
+    <>
+      <NextSeo
+        title={tag}
+        canonical={`${metadata.url}/tags/${tag}`}
+        openGraph={{
+          url: `${metadata.url}/tags/${tag}`,
+          title: `${tag} | ${metadata.title}`,
+        }}
+      />
+      <PostList posts={posts} initialPosts={initialPosts} title={tag} />
+    </>
+  );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
