@@ -15,6 +15,7 @@ interface IconProps {
 export const EmailIcon = ({ className, href }: IconProps) => {
   return (
     <a href={`mailto:${href}`} target="_blank" rel="noreferrer">
+      <span className="sr-only">Email Icon</span>
       <Email className={className} />
     </a>
   );
@@ -23,6 +24,7 @@ export const EmailIcon = ({ className, href }: IconProps) => {
 export const GithubIcon = ({ className, href }: IconProps) => {
   return (
     <a href={href} target="_blank" rel="noreferrer">
+      <span className="sr-only">Github Icon</span>
       <Github className={className} />
     </a>
   );
