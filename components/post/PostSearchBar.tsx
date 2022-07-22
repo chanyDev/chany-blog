@@ -8,7 +8,7 @@ interface PostSearchBarProps {
 const PostSearchBar = ({ setSearchValue }: PostSearchBarProps) => {
   return (
     <div className="relative flex items-center pb-4">
-      <button className="absolute flex translate-x-4">
+      <button className="absolute flex translate-x-4" aria-label="Search Posts">
         <SearchIcon className="w-4 h-4 font-light text-gray-300 fill-current dark:text-gray-500 " />
       </button>
       <input
