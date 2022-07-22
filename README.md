@@ -9,6 +9,17 @@
 - Tools : Eslint, Prettier
 - Deploy : Vercel
 
+## Front Matter
+
+```yaml
+---
+title: # required
+publishedDate: # required
+description: # required
+tags: []
+---
+```
+
 ## More Feature
 
 - [x] 블로그 첫 방문 시 테마 적용 안되는 문제 해결
